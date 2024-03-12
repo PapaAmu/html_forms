@@ -4,6 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Student Registration Form</title>
+
+</head>
+<body>
+
+<h2>Student Registration Form</h2>
+<!-- form starts here  -->
+<form action="/submit-registration" method="post">
+  
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="dob">Date of Birth:</label>
+  <input type="date" id="dob" name="dob" required><br>
+
+  <label for="gender">Gender:</label>
+  <select id="gender" name="gender" required>
+    <option value="">Select Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select><br>
+  <!-- the address can be as many characters and the user pleases -->
+  <label for="address">Address:</label>
+  <textarea id="address" name="address" required></textarea><br>
+
+  <label for="telephone">Telephone:</label>
+  <input type="tel" id="telephone" name="telephone" required><br>
+
+  <label for="email">Email Address:</label>
+  <input type="email" id="email" name="email" required><br>
+<!-- Courses options the user is registering for  -->
+  <label for="course">Course:</label>
+  <select id="course" name="course" required>
+    <option value="">Select Course</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Mathematics">Mathematics</option>
+    <option value="Biology">Biology</option>
+    <option value="Physics">Physics</option>
+    <option value="Chemistry">Chemistry</option>
+    <option value="English Literature">English Literature</option>
+    <option value="History">History</option>
+  </select><br>
+
+  <button type="submit">Register</button>
+  <button type="button" onclick="cancelRegistration()">Cancel</button>
+
+</form>
+
+<script>
+function cancelRegistration() {
+  // Implement cancellation logic here
+  alert("Registration cancelled!");
+}
+</script>
+
+</body>
+
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -56,59 +113,4 @@
     background-color: #003366; /* Darker Blue */
   }
 </style>
-</head>
-<body>
-
-<h2>Student Registration Form</h2>
-
-<form action="/submit-registration" method="post">
-  
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required><br>
-
-  <label for="dob">Date of Birth:</label>
-  <input type="date" id="dob" name="dob" required><br>
-
-  <label for="gender">Gender:</label>
-  <select id="gender" name="gender" required>
-    <option value="">Select Gender</option>
-    <option value="male">Male</option>
-    <option value="female">Female</option>
-    <option value="other">Other</option>
-  </select><br>
-
-  <label for="address">Address:</label>
-  <textarea id="address" name="address" required></textarea><br>
-
-  <label for="telephone">Telephone:</label>
-  <input type="tel" id="telephone" name="telephone" required><br>
-
-  <label for="email">Email Address:</label>
-  <input type="email" id="email" name="email" required><br>
-
-  <label for="course">Course:</label>
-  <select id="course" name="course" required>
-    <option value="">Select Course</option>
-    <option value="Computer Science">Computer Science</option>
-    <option value="Mathematics">Mathematics</option>
-    <option value="Biology">Biology</option>
-    <option value="Physics">Physics</option>
-    <option value="Chemistry">Chemistry</option>
-    <option value="English Literature">English Literature</option>
-    <option value="History">History</option>
-  </select><br>
-
-  <button type="submit">Register</button>
-  <button type="button" onclick="cancelRegistration()">Cancel</button>
-
-</form>
-
-<script>
-function cancelRegistration() {
-  // Implement cancellation logic here
-  alert("Registration cancelled!");
-}
-</script>
-
-</body>
 </html>
